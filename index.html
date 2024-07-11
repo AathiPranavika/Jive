@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('home-shapes-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+
+body {
+    position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0;
+}
+
+/* Button styles */
+button {
+  margin: 10px;
+  margin-right: 5px;
+  height: 55px;
+  border-radius: 20px;
+  color: black;
+  background-color: white;
+  border: solid 0.1px rgb(217, 217, 217);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: 30px;
+}
+#buts
+  {
+    display: flex;
+justify-content: flex-end; 
+  width: fit-content; 
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+
+  }
+button#l1:hover {
+  background-color: rgb(246, 217, 31);
+}
+
+button#l2:hover {
+  background-color: rgb(22, 177, 249);
+}
+
+button#l2 {
+  margin-right: 8px;
+  background-color: black;
+  color: white;
+}
+#i1
+{
+    margin-top: 20px;
+    height:100px;
+}
+button#free,
+button#jiv {
+  height: 50px;
+  width: 160px;
+  color: white;
+  background-color: black;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  margin:20px;
+}
+
+button#jiv:hover {
+  background-color: pink;
+  border: none;
+}
+
+button#free:hover {
+  background-color: rgb(63 131 248 / 0.5);
+  border: none;
+}
+p#dont {
+  font-size: 80px;
+  width: fit-content;
+  font-weight: 700;
+  text-align: center;
+}
+
+p#con {
+  font-size: 32px;
+  color: grey;
+  text-align: center;
+  width:70%;
+}
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bolder;
+  margin-top: 30px;
+}
+#image
+{
+    height:700px;
+}
+
+@media (max-width: 950px) {
+  body {
+    background-size: 390%;
+  }
+ #image
+ {
+    height:400px;
+ }
+ #logo
+{
+    width:400px;
+}
+  body,div,button,p,h1 {
+    text-align: center;
+    font-size: 25px; 
+  }
+ #buts
+ {
+    right:0px;
+ }
+  button#l1,
+  button#l2 {
+    font-size: 20px;
+    height: 60px;
+    width: 70px;
+    margin:10px;
+  }
+  
+  #hi {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  #i1
+  {
+    height:50px;
+    margin-left: 0;
+  }
+  p#dont
+  {
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+}
+</style>
+</head>
+<body>
+    <div id="b" style="display:flex;align-items:center;flex-direction: row">
+      <div id="logo" onmouseover="changes()" onmouseout="restores()">  
+        <img id="i1" src="logo-full.svg">    
+      </div>  
+      <div id="buts">
+    <button id="l1">Login</button>
+    <button id="l2">Sign up</button>
+    </div>
+    </div>
+    <p id="dont">Don’t make connecting awkward</p>
+    <p id="con">No more fumbling for business cards or searching for lost contacts after an event. Jive makes it easy to exchange info and keep the conversation going straight from your inbox.</p>
+    <div>
+        <button id="free">Sign up free</button>
+    </div>
+    <img id="image" src="phn.png" style="margin-top: 100px;">
+    <h1 id="how">Here’s how it works</h1>
+    <div id="more">More jiving, less shucking.</div>
+    <div id="par">
+        <div class="child">
+            <img id="ji"src="icon1.svg">
+            <h1>Scan the QR code</h1>
+            <p id="hi">When it’s time to swap info, have your new contact scan your QR code with their phone camera.</p>
+        </div>
+        <div class="child">
+            <img id="ji"src="icon2.svg">
+            <h1>Send a message</h1>
+            <p id="hi">Your QR code is linked to a custom message you’ve created. So all they have to do is hit Send.</p>
+        </div>
+        <div class="child">
+            <img id="ji"src="icon3.svg">
+            <h1>Follow-up from your inbox</h1>
+            <p id="hi">At the end of the event, you can quickly scan your inbox and reply to everyone you met.</p>
+        </div>
+    </div>
+    <div class="hel">
+    <button id="jiv">Start jiving</button>
+    </div>
+    <div onmouseover="change()" onmouseout="restore()">
+    <img id="i" src="logo-full.svg" style="height:100px;align-items:center;margin-top: 70px"> 
+    </div>
+    <div id="fi">Get connected and start jiving.</div>
+    <div id="van" style="text-align: center;margin-top: 20px">
+        <a href="">About</a>
+        <a href="">Privacy</a>
+        <a href="">Terms</a>
+        <a href="">Contact</a>
+    </div>
+    <p id="m"style="color:grey;padding-top:20px;text-align: center;">© 2024 <span id="j">Jive</span> by <span id="p">Plain Sight Ventures</span></p>
+    <script>
+        function change() {
+            var imgElement = document.getElementById("i");
+            imgElement.src = "logo-colors.svg";
+        }
+        function restore() {
+            var imgElement = document.getElementById("i");
+            imgElement.src = "logo-full.svg";
+        }
+        function changes() {
+            var imgElement = document.getElementById("i1");
+            imgElement.src = "logo-colors.svg";
+        }
+        function restores() {
+            var imgElement = document.getElementById("i1");
+            imgElement.src = "logo-full.svg";
+        }
+
+    </script>
+</body>
+</html>
